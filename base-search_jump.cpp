@@ -20,13 +20,13 @@ using namespace std;
 /// @param step
 /// @return
 
-uint64_t jumpSearch(std::vector<int64_t> array, int64_t key)
+uint64_t jumpSearch(std::vector<int64_t> array, uint64_t low, uint64_t high, int64_t key)
 {
 
-    uint64_t size = array.size();    // 获取容器大小
-    uint64_t step = std::sqrt(size); // 计算最佳跳跃步数, m = √n, 小浮点数会强制转换成整数
-    uint64_t step_i = step;          // 记录跳跃到第 i 步的位置
-    uint64_t prev = 0;               // 记录第 i-1 步的位置, 减少计算量
+    uint64_t size = high + 1;              // 获取容器大小
+    uint64_t step = std::sqrt(high - low); // 计算最佳跳跃步数, m = √n, 小浮点数会强制转换成整数
+    uint64_t step_i = low + step;          // 记录跳跃到第 i 步的位置
+    uint64_t prev = low;                   // 记录第 i-1 步的位置, 减少计算量
     // 通过将 key 值与 step_i 的值进行比较, 确认 key 值所在的区域(如果元素存在)
     // min(step_i, size)是为了防止 step_i 大小溢出
     while (array[std::min(step_i, size) - 1] < key) // 判断 key 值是否依旧大于 step_i 点值, 即在 step_i 点右侧
@@ -72,7 +72,9 @@ int main()
     std::cout << "\n输入要查找的值: ";
     std::cin >> key;
     // // // // // // // // // // // // // // // // // // // // // // // // // // //
-    int result = jumpSearch(array, key);
+    uint64_t low = 0;                 // 设置 vector 的初始最小索引.
+    uint64_t high = array.size() - 1; // 设置 vector 的初始最大索引.
+    int result = jumpSearch(array, low, high, key);
     (result == -1)
         ? cout << "\n容器中不存在此值."
         : cout << "\n元素存在于索引 [" << result << "] 处." << std::endl;

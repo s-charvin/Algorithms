@@ -14,11 +14,8 @@
 #include <cmath>
 using namespace std;
 
-uint64_t linearInterpolationSearch(const std::vector<int64_t> &array,
-                                   int64_t key)
+uint64_t linearInterpolationSearch(std::vector<int64_t> array, uint64_t low, uint64_t high, int64_t key)
 {
-    uint64_t size = array.size();
-    uint64_t low = 0, high = (size - 1);
     // 区间正确, 且 key 必须在区间内, 通过修改 [low high] 区间进行迭代
     while (low <= high && key >= array[low] && key <= array[high])
     {
@@ -60,7 +57,7 @@ uint64_t linearInterpolationSearch(const std::vector<int64_t> &array,
 /// @param low
 /// @param high
 /// @return
-uint64_t rec_linearInterpolationSearch(std::vector<int64_t> array, int64_t key, uint64_t low, uint64_t high)
+uint64_t rec_linearInterpolationSearch(std::vector<int64_t> array, uint64_t low, uint64_t high, int64_t key)
 {
     // 区间正确, 且 key 必须在区间内, 通过不同的 [low high] 进行递归
     if (low <= high && key >= array[low] && key <= array[high])
@@ -110,7 +107,7 @@ int main()
     // // // // // // // // // // // // // // // // // // // // // // // // // // //
     uint64_t low = 0;                 // 设置 vector 的初始最小索引.
     uint64_t high = array.size() - 1; // 设置 vector 的初始最大索引.
-    int result = rec_linearInterpolationSearch(array, key, low, high);
+    int result = rec_linearInterpolationSearch(array, low, high, key);
     (result == -1)
         ? cout << "\n容器中不存在此值."
         : cout << "\n元素存在于索引 [" << result << "] 处." << std::endl;

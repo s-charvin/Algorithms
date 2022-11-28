@@ -22,7 +22,7 @@ using namespace std;
 /// @param high
 /// @return
 
-uint64_t ternarySearch(std::vector<int64_t> array, int64_t key, uint64_t low, uint64_t high)
+uint64_t ternarySearch(std::vector<int64_t> array, uint64_t low, uint64_t high, int64_t key)
 
 {
 
@@ -64,7 +64,7 @@ uint64_t ternarySearch(std::vector<int64_t> array, int64_t key, uint64_t low, ui
     return -1;
 }
 
-uint64_t rec_ternarySearch(std::vector<int64_t> array, int64_t key, uint64_t low, uint64_t high)
+uint64_t rec_ternarySearch(std::vector<int64_t> array, uint64_t low, uint64_t high, int64_t key)
 {
     if (low <= high && key >= array[low] && key <= array[high]) // 区间正确, 且 key 必须在区间内, , 通过不同的 [low high] 进行递归
     {
@@ -126,7 +126,7 @@ int main()
     // // // // // // // // // // // // // // // // // // // // // // // // // // //
     uint64_t low = 0;                 // 设置 vector 的初始最小索引.
     uint64_t high = array.size() - 1; // 设置 vector 的初始最大索引.
-    int result = rec_ternarySearch(array, key, low, high);
+    int result = rec_ternarySearch(array, low, high, key);
     (result == -1)
         ? cout << "\n容器中不存在此值."
         : cout << "\n元素存在于索引 [" << result << "] 处." << std::endl;
