@@ -19,17 +19,17 @@ void swap(int *xp, int *yp)
     *yp = temp;
 }
 
-void selectionSort(int *array, uint64_t begin, uint64_t end)
+void selectionSort(int *array, uint64_t ind_begin, uint64_t ind_end)
 {
     int i, j, min_idx;
 
     // 一个个的从未排序的子数组中找到最小元素, 帮将其放到当前顺序迭代位置
-    for (i = begin; i < end; i++)
+    for (i = ind_begin; i < ind_end; i++)
     {
 
         // 在未排序子数组中遍历寻找最小值所在位置
         min_idx = i; // 记录当前位置
-        for (j = i + 1; j <= end; j++)
+        for (j = i + 1; j <= ind_end; j++)
             if (array[j] < array[min_idx])
                 min_idx = j; // 找到最小值
 
@@ -41,15 +41,15 @@ void selectionSort(int *array, uint64_t begin, uint64_t end)
 
 // 稳定排序算法: 在排序的同时, 使得排序后的等大元素与排序前相同
 
-void stableSelectionSort(int *array, uint64_t begin, uint64_t end)
+void stableSelectionSort(int *array, uint64_t ind_begin, uint64_t ind_end)
 {
     // 一个个的从未排序的子数组中找到最小元素, 帮将其放到当前顺序迭代位置
-    for (int i = begin; i < end; i++)
+    for (int i = ind_begin; i < ind_end; i++)
     {
         // array 的前 i-1 元素都是排序好的
         // 在未排序子数组 array[i:n-1] 中遍历寻找最小值所在位置
         int min_idx = i;
-        for (int j = i + 1; j < end + 1; j++)
+        for (int j = i + 1; j < ind_end + 1; j++)
             if (array[min_idx] > array[j])
                 min_idx = j;
 

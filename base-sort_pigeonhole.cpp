@@ -11,11 +11,11 @@ using namespace std;
 
 // 鸽巢排序
 
-void pigeonholeSort(int *array, uint64_t begin, uint64_t end)
+void pigeonholeSort(int *array, uint64_t ind_begin, uint64_t ind_end)
 {
     // 寻找最小值和最大值
     auto min = array[0], max = array[0];
-    for (int i = begin + 1; i < end + 1; i++)
+    for (int i = ind_begin + 1; i < ind_end + 1; i++)
     {
         if (array[i] < min)
             min = array[i];
@@ -33,11 +33,11 @@ void pigeonholeSort(int *array, uint64_t begin, uint64_t end)
 
     // Traverse through input array and put every element in its respective hole
     // 遍历 array, 并利用 holes 的位置记录 array 中每个元素出现的次数
-    for (int i = begin; i < end + 1; i++)
+    for (int i = ind_begin; i < ind_end + 1; i++)
         holes[array[i] - min]++;
 
     // 遍历 holes 按照顺序和记录的每个值出现的次数, 取出与 array 相匹配的元素并放入数组中。
-    int index = begin;              // 记录当前正在处理的 array 中元素的位置
+    int index = ind_begin;          // 记录当前正在处理的 array 中元素的位置
     for (int i = 0; i < range; i++) // 遍历 holes 中的所有出现的次数
     {
         while (holes[i] > 0) // 只要出现次数大于零

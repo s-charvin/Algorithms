@@ -25,15 +25,15 @@ using namespace std;
 //                 swap(array[j], array[j + 1]);
 // }
 // 冒泡排序, 添加停止算法
-void bubbleSort(int *array, uint64_t begin, uint64_t end)
+void bubbleSort(int *array, uint64_t ind_begin, uint64_t ind_end)
 {
 
     int i, j;
     bool swapped;
-    for (i = end; i >= begin; i--)
+    for (i = ind_end; i >= uint64_t(ind_begin); i--)
     {
         swapped = false;
-        for (j = begin; j < i; j++)
+        for (j = ind_begin; j < i; j++)
         {
             if (array[j] > array[j + 1])
             {
@@ -49,21 +49,21 @@ void bubbleSort(int *array, uint64_t begin, uint64_t end)
 // 冒泡查找, 递归实现
 // 因为排序号的值都放在最右侧,
 // 因此可以通过 size 参数, 间接调整每次函数的输入 array
-void rec_bubblesort(int *array, uint64_t begin, uint64_t end)
+void rec_bubblesort(int *array, uint64_t ind_begin, uint64_t ind_end)
 {
-    auto size = end - begin + 1;
+    auto size = ind_end - ind_begin + 1;
     if (size == 0 || size == 1)
     {
         return;
     }
-    for (int i = begin; i < end; i++) // 对当前 size 指定的区域进行一次冒泡操作
+    for (int i = ind_begin; i < ind_end; i++) // 对当前 size 指定的区域进行一次冒泡操作
     {
         if (array[i] > array[i + 1])
         {
             swap(array[i], array[i + 1]); // 最终最大值会放置到 size-1 位置
         }
     }
-    rec_bubblesort(array, begin, end - 1); // 通过 end-1 去除已经排序好的数据
+    rec_bubblesort(array, ind_begin, ind_end - 1); // 通过 end-1 去除已经排序好的数据
 }
 
 int main()
