@@ -15,12 +15,15 @@
  * * 并在该类型中实现一个能够得到栈的最小元素的 min 函数,
  * * 且在该栈中, 调用 min()、push(item) 及 pop() 函数的时间复杂度
  * * 都是 O(1)。
- * 链接: https://leetcode.cn/problems/bao-han-minhan-shu-de-zhan-lcof/?envType=study-plan&id=lcof&plan=lcof&plan_progress=cuzoj2j
- * 考察: 栈(先进后出)
+ * 链接:
+ * * https://leetcode.cn/problems/bao-han-minhan-shu-de-zhan-lcof/?envType=study-plan&id=lcof&plan=lcof&plan_progress=cuzoj2j
+ * 考察:
+ * * 栈(先进后出)
  * 基本注意点
  * * 栈支持的操作: pop(), push(item), top()
  * * 函数时间复杂度 O(1) 应该如何实现
  * 高阶注意点
+ * *
  */
 
 #include <iostream>

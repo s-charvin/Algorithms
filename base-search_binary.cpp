@@ -110,73 +110,143 @@ uint64_t rec_binarySearch(std::vector<int64_t> array, uint64_t low, uint64_t hig
     return -1;
 }
 
-/// @brief 利用二分查找的思想, 寻找容器中最接近指定 key 值的下限值
+/// @brief 利用二分查找的思想, 寻找第一个*等于*目标值的元素
 /// @param array
 /// @param low
 /// @param high
 /// @param key
 /// @return
-int64_t FloorSearch(std::vector<int64_t> array, uint64_t low, uint64_t high, int64_t key)
+uint64_t GetLeftFirstPosition(std::vector<int64_t> array, uint64_t low, uint64_t high, int64_t key)
 {
-    uint64_t mid;
 
-    while (high - low > 1) // 一步步缩紧区间
+    if (low <= high && key <= array[high])
     {
-        mid = low + (high - low) / 2;
+        uint64_t mid;
+        while (low <= high)
+        {
+            mid = low + (high - low) / 2;
 
-        if (array[mid] <= key)
-            low = mid;
-        else
-            high = mid;
+            if (array[mid] > key)
+                high = mid - 1; /* 选择左侧小于等于 key 的区域 */
+            else if (array[mid] < key)
+                low = mid + 1; /* 选择右侧大于等于 key 的区域, 直至到最后一个元素 */
+
+            else /* 如果中值刚好等于 key */
+            {
+                /** 如果中值等于 key, 且是第一个元素
+                 * 或 mid 左侧的数不为目标数时返回其位置
+                 */
+                if ((mid == 0) || (array[mid - 1] != key))
+                    return mid;
+                /* 否则选择左侧小于等于 key 的区间 */
+                high = mid - 1;
+            }
+        }
     }
-
-    return array[low]; // 返回最终区间范围的最小值
+    /* 当找不到值时, 即 high<0 或 low >= array.size() 或 high<low 时, 返回 -1 */
+    return -1;
 }
 
-/// @brief 利用二分查找的思想, 寻找重复元素的最右值位置
+/// @brief 利用二分查找的思想, 寻找最后一个等于目标值的元素
 /// @param array
 /// @param low
 /// @param high
 /// @param key
 /// @return
-uint64_t GetRightPosition(std::vector<int64_t> array, uint64_t low, uint64_t high, int64_t key)
+uint64_t GetRightLastPosition(std::vector<int64_t> array, uint64_t low, uint64_t high, int64_t key)
 {
-    uint64_t mid;
 
-    while (high - low > 1)
+    if (low <= high && key <= array[high])
     {
-        mid = low + (high - low) / 2;
+        uint64_t mid;
+        while (low <= high)
+        {
+            mid = low + (high - low) / 2;
 
-        if (array[mid] <= key)
-            low = mid;
-        else
-            high = mid;
+            if (array[mid] > key)
+                high = mid - 1; /* 选择左侧小于等于 key 的区域 */
+            else if (array[mid] < key)
+                low = mid + 1; /* 选择右侧大于等于 key 的区域 */
+            else
+            {
+                /* 如果中值等于 key, 且是最后一个元素
+                    或 mid 右侧的数不为目标数时返回其位置
+                  */
+                if ((mid == array.size() - 1) || (array[mid + 1] != key))
+                    return mid;
+                /* 否则选择右侧大于等于 key 的区间 */
+                low = mid + 1;
+            }
+        }
     }
-
-    return low;
+    /* 当找不到值时, 即 high<0 或 low >= array.size() 或 high<low 时, 返回 -1 */
+    return -1;
 }
 
-/// @brief 利用二分查找的思想, 寻找重复元素的最左值位置
+/// @brief 利用二分查找的思想, 寻找第一个*大于等于*目标值的元素
 /// @param array
 /// @param low
 /// @param high
 /// @param key
 /// @return
-uint64_t GetLeftPosition(std::vector<int64_t> array, uint64_t low, uint64_t high, int64_t key)
+
+int64_t GetCeilPosition(std::vector<int64_t> array, int64_t low, int64_t high, int64_t key)
 {
-    uint64_t mid;
-
-    while (high - low > 1)
+    /* 解决输入区域和数值是否存在问题 */
+    if (low <= high && key <= array[high])
     {
-        mid = low + (high - low) / 2;
-
-        if (array[mid] >= key)
-            high = mid;
-        else
-            low = mid;
+        int64_t mid;
+        while (low <= high) /* 一步步缩紧区间 */
+        {
+            mid = low + (high - low) / 2;
+            /* 找的值大于等于 key */
+            if (array[mid] >= key) /* 中间值大于等于 key */
+            {
+                /** 如果中值等于 key, 且是第一个元素
+                 * 或 mid 左侧的数不为目标数时返回其位置
+                 */
+                if ((mid == 0) || (array[mid - 1] < key))
+                    return mid;
+                high = mid - 1; /* 选取左侧区域*/
+            }
+            else /* 中间值小于 key */
+            {
+                low = mid + 1; /* 选取右侧区域*/
+            }
+        }
     }
+    /* 当找不到值时, 即 high<0 或 low >= array.size() 或 high<low 时, 返回 -1 */
+    return -1;
+}
 
-    return high;
+/// @brief 利用二分查找的思想, 寻找最后一个小于等于目标值的元素
+/// @param array
+/// @param low
+/// @param high
+/// @param key
+/// @return
+int64_t GetFloorPosition(std::vector<int64_t> array, int64_t low, int64_t high, int64_t key)
+{
+    if (low <= high)
+    {
+        int64_t mid;
+        while (low <= high) /* 一步步缩紧区间 */
+        {
+            mid = low + (high - low) / 2; /* 记录区间中间点 */
+            if (array[mid] <= key)
+            { /* 如果中值等于 key, 且是最后一个元素
+                 或 mid 右侧的数不为目标数时返回其位置
+               */
+                if ((mid == array.size() - 1) || (array[mid + 1] > key))
+                    return mid;
+                low = mid + 1;
+            }
+            else
+                high = mid - 1;
+        }
+    }
+    /* 当找不到值时, 即 high<0 或 low >= array.size() 或 high<low 时, 返回 -1 */
+    return -1;
 }
 
 /// @brief 利用二分查找的思想, 寻找重复值所在位置区间
@@ -186,8 +256,9 @@ uint64_t GetLeftPosition(std::vector<int64_t> array, uint64_t low, uint64_t high
 /// @return
 int64_t CountOccurances(std::vector<int64_t> array, uint64_t low, uint64_t high, int64_t key)
 {
-    uint64_t left = GetLeftPosition(array, -1, high, key);
-    uint64_t right = GetRightPosition(array, 0, high + 1, key);
+    uint64_t left = GetLeftFirstPosition(array, low, high, key);
+    uint64_t right = GetRightLastPosition(array, left < 0 ? 0 : left, high, key);
+
     return (array[left] == key && key == array[right]) ? (right - left + 1) : 0;
 }
 
