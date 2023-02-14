@@ -22,7 +22,7 @@ using namespace std;
 /// @param key 被查找的值
 /// @return
 
-uint64_t binarySearch(std::vector<int64_t> array, uint64_t low, uint64_t high, int64_t key)
+uint64_t binarySearch1D(std::vector<int64_t> array, uint64_t low, uint64_t high, int64_t key)
 {
 
     while (low <= high && key >= array[low] && key <= array[high]) // 区间正确, 且 key 必须在区间内, 通过修改 [low high] 进行迭代
@@ -52,7 +52,7 @@ uint64_t binarySearch(std::vector<int64_t> array, uint64_t low, uint64_t high, i
 /// @param high 初始最大索引位置.
 /// @param key 被查找的值
 /// @return
-uint64_t binarySearch2(std::vector<int64_t> array, uint64_t low, uint64_t high, int64_t key)
+uint64_t binarySearch1D2(std::vector<int64_t> array, uint64_t low, uint64_t high, int64_t key)
 {
     while (high - low > 1)
     {
@@ -87,7 +87,7 @@ uint64_t binarySearch2(std::vector<int64_t> array, uint64_t low, uint64_t high, 
 /// @param key 被查找的值
 /// @return
 // 通过限定不同的搜索区间, 使用递归实现
-uint64_t rec_binarySearch(std::vector<int64_t> array, uint64_t low, uint64_t high, int64_t key)
+uint64_t rec_binarySearch1D(std::vector<int64_t> array, uint64_t low, uint64_t high, int64_t key)
 {
 
     if (low <= high && key >= array[low] && key <= array[high]) // 区间正确, 且 key 必须在区间内, 然后通过不同的 [low high] 进行递归
@@ -100,11 +100,11 @@ uint64_t rec_binarySearch(std::vector<int64_t> array, uint64_t low, uint64_t hig
 
         else if (key < array[mid]) // 否则, 如果二分点位置值大于 key 值, 则缩小到下半部分区间[low, mid-1]
         {
-            return rec_binarySearch(array, key, low, mid - 1);
+            return rec_binarySearch1D(array, key, low, mid - 1);
         }
         else // 否则, 如果二分点位置值小于 key 值, 则缩小到上半部分区间 [mid-1, high]
         {
-            return rec_binarySearch(array, key, mid + 1, high);
+            return rec_binarySearch1D(array, key, mid + 1, high);
         }
     }
     return -1;
@@ -116,7 +116,7 @@ uint64_t rec_binarySearch(std::vector<int64_t> array, uint64_t low, uint64_t hig
 /// @param high
 /// @param key
 /// @return
-uint64_t GetLeftFirstPosition(std::vector<int64_t> array, uint64_t low, uint64_t high, int64_t key)
+uint64_t GetLeftFirstPosition1D(std::vector<int64_t> array, uint64_t low, uint64_t high, int64_t key)
 {
 
     if (low <= high && key <= array[high])
@@ -153,7 +153,7 @@ uint64_t GetLeftFirstPosition(std::vector<int64_t> array, uint64_t low, uint64_t
 /// @param high
 /// @param key
 /// @return
-uint64_t GetRightLastPosition(std::vector<int64_t> array, uint64_t low, uint64_t high, int64_t key)
+uint64_t GetRightLastPosition1D(std::vector<int64_t> array, uint64_t low, uint64_t high, int64_t key)
 {
 
     if (low <= high && key <= array[high])
@@ -190,7 +190,7 @@ uint64_t GetRightLastPosition(std::vector<int64_t> array, uint64_t low, uint64_t
 /// @param key
 /// @return
 
-int64_t GetCeilPosition(std::vector<int64_t> array, int64_t low, int64_t high, int64_t key)
+int64_t GetCeilPosition1D(std::vector<int64_t> array, int64_t low, int64_t high, int64_t key)
 {
     /* 解决输入区域和数值是否存在问题 */
     if (low <= high && key <= array[high])
@@ -219,13 +219,13 @@ int64_t GetCeilPosition(std::vector<int64_t> array, int64_t low, int64_t high, i
     return -1;
 }
 
-/// @brief 利用二分查找的思想, 寻找最后一个小于等于目标值的元素
+/// @brief 利用二分查找的思想, 寻找最后一个*小于等于*目标值的元素
 /// @param array
 /// @param low
 /// @param high
 /// @param key
 /// @return
-int64_t GetFloorPosition(std::vector<int64_t> array, int64_t low, int64_t high, int64_t key)
+int64_t GetFloorPosition1D(std::vector<int64_t> array, int64_t low, int64_t high, int64_t key)
 {
     if (low <= high)
     {
@@ -234,16 +234,14 @@ int64_t GetFloorPosition(std::vector<int64_t> array, int64_t low, int64_t high, 
         {
             mid = low + (high - low) / 2; /* 记录区间中间点 */
             if (array[mid] <= key)
-            { /* 如果中值等于 key, 且是最后一个元素
-                 或 mid 右侧的数不为目标数时返回其位置
-               */
-                if ((mid == array.size() - 1) || (array[mid + 1] > key))
-                    return mid;
+            {
                 low = mid + 1;
             }
             else
                 high = mid - 1;
         }
+        if (high >= 0 && array[high] <= key)
+            return high; /* 正确返回时, low 一定是指向第一个*大于等于*目标值的元素 */
     }
     /* 当找不到值时, 即 high<0 或 low >= array.size() 或 high<low 时, 返回 -1 */
     return -1;
@@ -254,12 +252,121 @@ int64_t GetFloorPosition(std::vector<int64_t> array, int64_t low, int64_t high, 
 /// @param size
 /// @param key
 /// @return
-int64_t CountOccurances(std::vector<int64_t> array, uint64_t low, uint64_t high, int64_t key)
+int64_t CountOccurances1D(std::vector<int64_t> array, uint64_t low, uint64_t high, int64_t key)
 {
-    uint64_t left = GetLeftFirstPosition(array, low, high, key);
-    uint64_t right = GetRightLastPosition(array, left < 0 ? 0 : left, high, key);
+    uint64_t left = GetLeftFirstPosition1D(array, low, high, key);
+    uint64_t right = GetRightLastPosition1D(array, left < 0 ? 0 : left, high, key);
 
     return (array[left] == key && key == array[right]) ? (right - left + 1) : 0;
+}
+
+/// @brief 利用二分查找的思想, 寻找二位数组中指定列第一个*大于等于*目标值的元素
+int64_t GetVericalCeilPosition2D(vector<vector<int>> &matrix, int64_t col, int64_t low, int64_t high, int64_t key)
+{
+    int64_t size = high - low + 1;
+
+    if (low <= high)
+    {
+        int64_t mid;
+        while (low <= high) /* 一步步缩紧区间 */
+        {
+            mid = low + (high - low) / 2;
+            if (matrix[mid][col] >= key) /* 中间值大于等于 key */
+            {
+                high = mid - 1; /* 选取左侧区域*/
+            }
+            else /* 中间值小于 key */
+            {
+                low = mid + 1; /* 选取右侧区域*/
+            }
+        }
+        if (low <= size && matrix[low][col] >= key)
+            return low; /* 正确返回时, low 一定是指向第一个*大于等于*目标值的元素 */
+    }
+    /* 当找不到值时, 即  high<low 时, 返回 -1 */
+    return -1;
+}
+
+/// @brief 利用二分查找的思想, 寻找二维数组中指定列后一个*小于等于*目标值的元素
+int64_t GetVericalFloorPosition2D(vector<vector<int>> &matrix, int64_t col, int64_t low, int64_t high, int64_t key)
+{
+    int64_t size = high - low + 1;
+
+    if (low <= high)
+    {
+        int64_t mid;
+        while (low <= high) /* 一步步缩紧区间 */
+        {
+            mid = low + (high - low) / 2;
+            if (matrix[mid][col] <= key) /* 中间值小于等于 key */
+            {
+                low = mid + 1; /* 选取右侧区域*/
+            }
+            else /* 中间值小于 key */
+            {
+                high = mid - 1; /* 选取左侧区域*/
+            }
+        }
+        if (high >= 0 && matrix[high][col] <= key)
+            return high; /* 正确返回时, low 一定是指向第一个*小于等于*目标值的元素 */
+    }
+    /* 当找不到值时, 即  high<low 时, 返回 -1 */
+    return -1;
+}
+
+/// @brief 利用二分查找的思想, 寻找二维数组中指定行后一个*小于等于*目标值的元素
+int64_t GetHorizonCeilPosition2D(vector<vector<int>> &matrix, int64_t row, int64_t low, int64_t high, int64_t key)
+{
+
+    int64_t size = high - low + 1;
+
+    if (low <= high)
+    {
+        int64_t mid;
+        while (low <= high) /* 一步步缩紧区间 */
+        {
+            mid = low + (high - low) / 2;
+            if (matrix[row][mid] >= key) /* 中间值大于等于 key */
+            {
+                high = mid - 1; /* 选取左侧区域*/
+            }
+            else /* 中间值小于 key */
+            {
+                low = mid + 1; /* 选取右侧区域*/
+            }
+        }
+        if (low <= size && matrix[row][mid] >= key)
+            return low; /* 正确返回时, low 一定是指向第一个*大于等于*目标值的元素 */
+    }
+    /* 当找不到值时, 即  high<low 时, 返回 -1 */
+    return -1;
+}
+
+/// @brief 利用二分查找的思想, 寻找二维数组中指定行最后一个*小于等于*目标值的元素
+int64_t GetHorizonFloorPosition2D(vector<vector<int>> &matrix, int64_t row, int64_t low, int64_t high, int64_t key)
+{
+    int64_t size = high - low + 1;
+
+    if (low <= high)
+    {
+        int64_t mid;
+        while (low <= high) /* 一步步缩紧区间 */
+        {
+            mid = low + (high - low) / 2;
+            if (matrix[row][mid] <= key) /* 中间值小于等于 key */
+            {
+                low = mid + 1; /* 选取右侧区域*/
+            }
+            else /* 中间值小于 key */
+            {
+                high = mid - 1; /* 选取左侧区域*/
+            }
+        }
+        if (high >= 0 && matrix[row][mid] <= key)
+            return high; /* 正确返回时, low 一定是指向第一个*小于等于*目标值的元素 */
+    }
+    /* 当找不到值时, 即  high<low 时, 返回 -1 */
+    return -1;
 }
 
 /// @brief 利用二分查找的思想, 在一个经过排序后, 并在某一未知位置又做了次旋转的数组中, 查找其最小元素。
@@ -341,6 +448,57 @@ int findFirstValue(int64_t (*func)(int64_t), int64_t key)
 
 int main()
 {
+    vector<int64_t> nums = {1, 3, 5, 7, 9, 10, 10, 10, 17, 17, 17, 20, 30, 50, 60, 70};
+
+    cout << "Test: [";
+    for (auto num : nums)
+        cout << num << " ";
+    cout << "]" << endl
+         << "Need: -5   "
+         << "But: " << GetFloorPosition1D(nums, 0, nums.size() - 1, -5) << endl;
+
+    cout << "Test: [";
+    for (auto num : nums)
+        cout << num << " ";
+    cout << "]" << endl
+         << "Need: 1   "
+         << "But: " << GetFloorPosition1D(nums, 0, nums.size() - 1, 1) << endl;
+
+    cout << "Test: [";
+    for (auto num : nums)
+        cout << num << " ";
+    cout << "]" << endl
+         << "Need: 16   "
+         << "But: " << GetFloorPosition1D(nums, 0, nums.size() - 1, 16) << endl;
+
+    vector<int64_t> nums2 = {1};
+    cout << "Test: [";
+    for (auto num : nums2)
+        cout << num << " ";
+    cout << "]" << endl
+         << "Need: 1   "
+         << "But: " << GetFloorPosition1D(nums2, 0, nums2.size() - 1, 1) << endl;
+
+    vector<int64_t> nums3 = {1, 1, 1, 1, 1};
+    cout << "Test: [";
+    for (auto num : nums3)
+        cout << num << " ";
+    cout << "]" << endl
+         << "Need: 1   "
+         << "But: " << GetFloorPosition1D(nums3, 0, nums3.size() - 1, 1) << endl;
+    cout << "Test: [";
+    for (auto num : nums3)
+        cout << num << " ";
+    cout << "]" << endl
+         << "Need: 2   "
+         << "But: " << GetFloorPosition1D(nums3, 0, nums3.size() - 1, 1) << endl;
+    vector<int64_t> nums4 = {};
+    cout << "Test: [";
+    for (auto num : nums4)
+        cout << num << " ";
+    cout << "]" << endl
+         << "Need: 1   "
+         << "But: " << GetFloorPosition1D(nums4, 0, nums4.size() - 1, 1) << endl;
 
     int64_t *ptemp = new int64_t;
     std::vector<int64_t> array;
@@ -360,10 +518,10 @@ int main()
     // // // // // // // // // // // // // // // // // // // // // // // // // // //
     uint64_t low = 0;                 // 设置 vector 的初始最小索引.
     uint64_t high = array.size() - 1; // 设置 vector 的初始最大索引.
-    int result = rec_binarySearch(array, low, high, key);
+    int result = GetFloorPosition1D(array, low, high, key);
     (result == -1)
         ? cout << "\n容器中不存在此值."
-        : cout << "\n元素存在于索引 [" << result << "] 处." << std::endl;
+        : cout << "\n 元素存在于索引 [" << result << "] 处." << std::endl;
     // // // // // // // // // // // // // // // // // // // // // // // // // // // // // //
 
     return 0;

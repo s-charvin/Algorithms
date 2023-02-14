@@ -93,7 +93,6 @@ int GetRightLastPosition(std::vector<int> array, int low, int high, int key)
         while (low <= high)
         {
             mid = low + (high - low) / 2;
-
             if (array[mid] > key)
                 high = mid - 1; /* 选择左侧小于等于 key 的区域 */
             else if (array[mid] < key)

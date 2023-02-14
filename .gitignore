@@ -1,4 +1,9 @@
 # Prerequisites
+/output
+/cmake-build-debug
+/build
+/.vscode
+.idea
 *.d
 
 # Compiled Object files
