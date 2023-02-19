@@ -23,13 +23,6 @@
  * -
  */
 
-/**
- * 题解思路:
- *
- *
- *
- */
-
 #include <iostream>
 #include <stack>
 #include <string>
