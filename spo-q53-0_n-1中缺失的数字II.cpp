@@ -11,18 +11,18 @@
 
 /**
  * 题目：0～n-1中缺失的数字II
- * * 一个长度为 n-1 的递增排序数组中的所有数字都是唯一的，
- * * 并且每个数字都在范围 0～n-1 之内。
- * * 在范围0～n-1内的n个数字中有且只有一个数字不在该数组中，
- * * 请找出这个数字。
+ * - 一个长度为 n-1 的递增排序数组中的所有数字都是唯一的，
+ * - 并且每个数字都在范围 0～n-1 之内。
+ * - 在范围0～n-1内的n个数字中有且只有一个数字不在该数组中，
+ * - 请找出这个数字。
  * 链接:
- * * https://leetcode.cn/problems/que-shi-de-shu-zi-lcof/?envType=study-plan&id=lcof
+ * - https://leetcode.cn/problems/que-shi-de-shu-zi-lcof/?envType=study-plan&id=lcof
  * 考察:
- * * 查找算法
+ * - 查找算法
  * 基本注意点
- * *
+ * -
  * 高阶注意点
- * *
+ * -
  */
 
 #include <iostream>

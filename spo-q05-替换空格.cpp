@@ -11,15 +11,15 @@
 
 /**
  * 题目：替换空格
- * * 请实现一个函数，把字符串 s 中的每个空格替换成"%20"。
+ * - 请实现一个函数，把字符串 s 中的每个空格替换成"%20"。
  * 链接:
- * * https://leetcode.cn/problems/ti-huan-kong-ge-lcof/
+ * - https://leetcode.cn/problems/ti-huan-kong-ge-lcof/
  * 考察:
- * * 字符串
+ * - 字符串
  * 基本注意点
- * *
+ * -
  * 高阶注意点
- * *
+ * -
  */
 
 /**

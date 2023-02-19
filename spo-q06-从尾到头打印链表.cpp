@@ -11,14 +11,14 @@
 
 /**
  * 题目：
- * * 输入一个链表的头节点，从尾到头反过来返回每个节点的值（用数组返回）。
+ * - 输入一个链表的头节点，从尾到头反过来返回每个节点的值（用数组返回）。
  * 链接:
- * * https://leetcode.cn/problems/cong-wei-dao-tou-da-yin-lian-biao-lcof/?envType=study-plan&id=lcof&plan=lcof&plan_progress=cuzoj2j
+ * - https://leetcode.cn/problems/cong-wei-dao-tou-da-yin-lian-biao-lcof/?envType=study-plan&id=lcof&plan=lcof&plan_progress=cuzoj2j
  * 考察:
  * 基本注意点
- * *
+ * -
  * 高阶注意点
- * *
+ * -
  */
 
 #include <iostream>

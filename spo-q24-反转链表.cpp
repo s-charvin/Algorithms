@@ -11,16 +11,16 @@
 
 /**
  * 题目：
- * * 定义一个函数, 输入一个链表的头节点,
- * * 反转该链表并输出反转后链表的头节点。
+ * - 定义一个函数, 输入一个链表的头节点,
+ * - 反转该链表并输出反转后链表的头节点。
  * 链接:
- * * https://leetcode.cn/problems/fan-zhuan-lian-biao-lcof/?envType=study-plan&id=lcof&plan=lcof&plan_progress=cuzoj2j
+ * - https://leetcode.cn/problems/fan-zhuan-lian-biao-lcof/?envType=study-plan&id=lcof&plan=lcof&plan_progress=cuzoj2j
  * 考察:
- * * 栈(先进后出)
+ * - 栈(先进后出)
  * 基本注意点
- * *
+ * -
  * 高阶注意点
- * *
+ * -
  */
 
 #include <iostream>
