@@ -53,6 +53,7 @@
         "deque": "cpp",
         "algorithm": "cpp",
         "xtree": "cpp",
-        "string": "cpp"
+        "string": "cpp",
+        "sstream": "cpp"
     }
 }
