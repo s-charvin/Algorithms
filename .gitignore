@@ -1,0 +1,101 @@
+
+# idea 忽略的文件
+
+## 默认忽略的文件
+/.idea/shelf/
+/.idea/workspace.xml
+## 基于编辑器的 HTTP 客户端请求
+/.idea/httpRequests/
+## Datasource local storage ignored files
+/.idea/dataSources/
+/.idea/dataSources.local.xml
+
+# c++ 忽略的文件
+
+## Prerequisites
+/c++/output
+/c++/cmake-build-debug
+/c++/build
+/c++/.vscode
+/c++/.idea
+/c++*.d
+
+## Compiled Object files
+*.slo
+*.lo
+*.o
+*.obj
+
+## Precompiled Headers
+*.gch
+*.pch
+
+## Compiled Dynamic libraries
+*.so
+*.dylib
+*.dll
+
+## Fortran module files
+*.mod
+*.smod
+
+## Compiled Static libraries
+*.lai
+*.la
+*.a
+*.lib
+
+## Executables
+*.exe
+*.out
+*.app
+
+
+# kotlin 忽略的文件
+/kotlin/.gradle
+/kotlin/build/
+!/kotlin/gradle/wrapper/gradle-wrapper.jar
+!**/src/main/**/build/
+!**/src/test/**/build/
+
+## IntelliJ IDEA ###
+/kotlin/.idea/modules.xml
+/kotlin/.idea/jarRepositories.xml
+/kotlin/.idea/compiler.xml
+/kotlin/.idea/libraries/
+*.iws
+*.iml
+*.ipr
+/kotlin/out/
+!**/src/main/**/out/
+!**/src/test/**/out/
+
+## Kotlin
+/kotlin/.kotlin
+
+## Eclipse
+/kotlin/.apt_generated
+/kotlin/.classpath
+/kotlin/.factorypath
+/kotlin/.project
+/kotlin/.settings
+/kotlin/.springBeans
+/kotlin/.sts4-cache
+/kotlin/bin/
+!**/src/main/**/bin/
+!**/src/test/**/bin/
+
+## NetBeans
+/kotlin//nbproject/private/
+/kotlin//nbbuild/
+/kotlin//dist/
+/kotlin//nbdist/
+/kotlin//.nb-gradle/
+
+## VS Code
+/kotlin/.vscode/
+
+## Mac OS
+.DS_Store
+/c++/.DS_Store
+/kotlin/.DS_Store

@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="NONE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="05eac74b-9dcf-4f4c-a047-8f86324030a3" name="更改" comment="">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/caches/deviceStreaming.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/kotlinc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/migrations.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/runConfigurations.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build.gradle.kts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gradle.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gradlew" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gradlew.bat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/local.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/settings.gradle.kts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/demo.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/lk_1.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/lk_102.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/lk_103.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/lk_1047.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/lk_1049.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/lk_106.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/lk_108.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/lk_11.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/lk_1112.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/lk_1115.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/lk_115.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/lk_1171.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/lk_1174.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/lk_121.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/lk_122.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/lk_123.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/lk_125.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/lk_13.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/lk_1349.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/lk_136.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/lk_1378.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/lk_141.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/lk_144.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/lk_146.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/lk_15.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/lk_153.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/lk_1530.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/lk_155.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/lk_160.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/lk_167.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/lk_1769.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/lk_180.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/lk_1839.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/lk_188.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/lk_19.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/lk_199.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/lk_1997.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/lk_2.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/lk_20.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/lk_200.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/lk_206.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/lk_21.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/lk_211.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/lk_215.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/lk_221.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/lk_224.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/lk_227.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/lk_23.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/lk_2320.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/lk_239.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/lk_24.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/lk_25.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/lk_26.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/lk_260.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/lk_2684.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/lk_27.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/lk_2703.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/lk_2800.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/lk_2850.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/lk_2949.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/lk_2959.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/lk_3.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/lk_30.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/lk_300.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/lk_3086.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/lk_3099.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/lk_31.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/lk_3115.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/lk_316.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/lk_32.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/lk_33.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/lk_347.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/lk_350.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/lk_36.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/lk_37.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/lk_39.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/lk_392.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/lk_4.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/lk_40.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/lk_409.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/lk_42_jieyushui.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/lk_452.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/lk_48.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/lk_49.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/lk_5.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/lk_509.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/lk_530.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/lk_538.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/lk_54.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/lk_56.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/lk_560.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/lk_569.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/lk_585.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/lk_59.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/lk_63.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/lk_649.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/lk_670.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/lk_679.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/lk_69.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/lk_697.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/lk_70.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/lk_705.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/lk_718.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/lk_72.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/lk_74.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/lk_76.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/lk_787.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/lk_794.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/lk_8.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/lk_84.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/lk_918.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/lk_92.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/lk_93.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/lk_lcr_103.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/lk_lcr_130.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/lk_lcr_21.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/lk_lcr_29.kt" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ClangdSettings">
+    <option name="formatViaClangd" value="false" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <projects_view>
+          <tree_state>
+            <expand />
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Kotlin Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 1
+}</component>
+  <component name="ProjectId" id="2uheLrDMSLR2uC9Zl4HO5QKGjIN" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;Gradle.构建 Test.executor&quot;: &quot;Run&quot;,
+    &quot;Kotlin.DemoKt.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.readMode.enableVisualFormatting&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;cf.first.check.clang-format&quot;: &quot;false&quot;,
+    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/charvin/Projects/Test/Test&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.language.and.region&quot;,
+    &quot;show.do.not.copy.http.proxy.settings.to.gradle&quot;: &quot;false&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/kotlin" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/kotlin" />
+      <recent name="$PROJECT_DIR$/src" />
+    </key>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9823dce3aa75-a94e463ab2e7-intellij.indexing.shared.core-IU-243.26053.27" />
+        <option value="bundled-js-predefined-d6986cc7102b-1632447f56bf-JavaScript-IU-243.26053.27" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="应用程序级" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="默认任务">
+      <changelist id="05eac74b-9dcf-4f4c-a047-8f86324030a3" name="更改" comment="" />
+      <created>1742705184434</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1742705184434</updated>
+      <workItem from="1742705185602" duration="242000" />
+      <workItem from="1742705667489" duration="50500000" />
+      <workItem from="1744026412197" duration="2766000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>
